@@ -1,0 +1,14 @@
+{
+  "name": "ejemplos_ciclos",
+  "version": "1.0.0",
+  "description": "Realizar varios ejemplos uso de ciclo con js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ciclos"
+  ],
+  "author": "fraedma",
+  "license": "ISC"
+}
