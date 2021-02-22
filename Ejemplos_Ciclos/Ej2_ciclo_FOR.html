@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2 Ciclo FOR</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>PRIMER EJEMPLO DE CICLO FOR</h1>
+        <hr>
+        <br>
+        <br>
+        <table border="5">
+            <th>Números</th><th>Valor Letras</th>
+            <tbody id="cuerpo">
+                
+            </tbody>
+        </table>
+        <script>
+            var salida='';
+            var suma=0;
+            var contPar=0;
+            var contImp=0;
+            for(var i=1;i<=5; i++){
+                suma+=i;  //suma=suma+i; instrucción acumuladora
+                if(i%2==0){
+                    contPar++;
+                }
+                else{
+                    contImp++;
+                }
+                salida+='<tr><td>'+i+'</td><td>'+letras(i)+'</td></tr>';
+            }
+            salida+='<tr><td>'+'La Suma Numero es: '+suma+'</td><td>'+'Vacio'+'</td></tr>';
+            salida+='<tr><td>'+'Cantidad Numeros Pares: '+contPar+'</td><td>'+'Vacio'+'</td></tr>';
+            salida+='<tr><td>'+'Cantidad Numeros Impares: '+contImp+'</td><td>'+'Vacio'+'</td></tr>';
+
+            document.getElementById('cuerpo').innerHTML=salida;
+
+            function letras(num){
+                switch (num){
+                    case 1: return('UNO');break;
+                    case 2: return('DOS');break;
+                    case 3: return('TRES');break;
+                    case 4: return('CUATRO');break;
+                    case 5: return('CINCO');break;
+
+                }
+            }
+        </script>
+    </center>
+    
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo 1 Ciclo FOR</title>
+    <title>Ejemplo 3 Ciclo While</title>
     <style>
         body{
             background-color: aqua;
@@ -17,16 +17,21 @@
 </head>
 <body>
     <center>
-        <h1>PRIMER EJEMPLO DE CICLO FOR</h1>
+        <h1>PRIMER EJEMPLO DE CICLO WHILE</h1>
         <hr>
         <br>
         <br>
         <script>
-            for(var i=1;i<=10; i++){
-                console.log(i);
+            var letra=prompt('DIGITE UNA LETRA/BLACO PARA SALIR: ','');
+            while(letra!=''){
+                console.log(letra);
+                var letra=prompt('DIGITE UNA LETRA/BLACO PARA SALIR: ','');
             }
+            
         </script>
+
+
+
     </center>
-    
 </body>
 </html>

@@ -2,4 +2,5 @@
 Desarrollo de Curso Fundamentos de Programación LI con énfasis en Medios Audiovisuales
 ## Docente Franklin Martínez Ávila
 ### Daniela Villadiego
+#### Reiner Infante
 
