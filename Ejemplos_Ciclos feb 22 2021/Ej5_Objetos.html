@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Objetos</title>
+    <style>
+        body{
+            background-color: cadetblue;
+            color: black;
+            font-size: 20px;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>GESTION VENTAS DE ARTÍCULOS</h1>
+        <hr>
+        <br>
+        <table border="6">
+            <th>Descripción</th><th>Valor</th>
+            <tbody>
+                <tr>
+                    <td>Articulo</td>
+                    <td><input type="text" name="art" id="art" autofocus></td>
+                </tr>
+                <tr>
+                    <td>Unidades Medida</td>
+                    <td>
+                        <select name="und" id="und">
+                            <option value="0">Metros</option>
+                            <option value="1">Centimetros</option>
+                            <option value="2">Unidad</option>
+                            <option value="3">Bulto x 50Kg</option>
+                            <option value="4">Kilogramos</option>
+                            <option value="5">Caja x 10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Precio Compra</td>
+                    <td><input type="text" name="pc" id="pc"></td>
+                </tr>
+                <tr>
+                    <td>Precio Venta</td>
+                    <td><input type="text" name="pv" id="pv"></td>
+                </tr>
+                <tr>
+                    <td>Cantidad</td>
+                    <td><input type="text" name="cant" id="cant"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="5">
+            <tr><td><button onclick="registrarVenta()">REGISTRAR VENTA</button></td></tr>
+        </table>
+        <br>
+        <h3>Listado de Edudiantes Registros</h3>
+        <hr>
+        <table border="5">
+            <th>Articulo</th><th>Unidades Medida</th><th>Precio Compra</th><th>Precio Venta</th><th>Cantidad</th> <th>Total Venta</th>
+            <tbody id="cuerpo"></tbody>
+        </table>
+    </center>
+    <script>
+    var salida='';
+    var objVtaArt = {
+        art : null,
+        und : null,
+        pc : null,
+        pv : null,
+        cant : null
+    }
+    console.log(objVtaArt);
+    function registrarVenta(){
+       objVtaArt.art=document.getElementById('art').value;
+       objVtaArt.und=document.getElementById('und').value;
+       objVtaArt.pc=document.getElementById('pc').value;
+       objVtaArt.pv=document.getElementById('pv').value;
+       objVtaArt.cant=document.getElementById('cant').value;
+       salida+='<tr><td>'+objVtaArt.art+'</td><td>'+convertirUnd(objVtaArt.und)+'</td><td>'+objVtaArt.pc+'</td><td>'+objVtaArt.pv+'</td><td>'+objVtaArt.cant+'</td><td>'+totVta(objVtaArt.pv,objVtaArt.cant)+'</td></tr>';
+        document.getElementById('cuerpo').innerHTML=salida;
+        limpiarCajas();
+    }
+
+    function limpiarCajas(){
+        document.getElementById('art').value='';
+        document.getElementById('pc').value='';
+        document.getElementById('pv').value='';
+        document.getElementById('cant').value='';
+        document.getElementById('art').focus();
+    }
+
+    function totVta(pv,cant){
+        return (pv*cant);
+    }
+
+    function convertirUnd(und){
+        und=parseInt(und);
+        switch(und){
+            case 0: return "Metros"; break;
+            case 1: return "Centimetros"; break;
+            case 2: return "Unidad"; break;
+            case 3: return "Bulto x 50Kg"; break;
+            case 4: return "Kilogramos"; break;
+            case 5: return "Caja x 10"; break;
+
+        }
+    }
+
+
+    </script>
+</body>
+</html>
