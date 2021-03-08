@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 8 Array</title>
+    <style>
+        body{
+            background-color: cornsilk;
+            color: darkblue;
+            font-size: 20px;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Ejemplo de Arreglos Insertar y visualizar datos</h1>
+        <hr>
+        <table border="5">
+            <th>Descripción</th><th>Valor</th>
+            <tbody>
+                <tr>
+                    <td>Digitar Números</td>
+                    <td><input type="text" name="num" id="num"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="5">
+            <tr>
+                <td><button onclick="enviar()">ENVIAR</button></td>
+                <td><button onclick="listarNumeros()">Listar Números</button></td>
+            </tr>
+        </table>
+        <br>
+        <h2>Lista de Númeos</h2>
+        <table border="5">
+            <th>Numeros</th>
+            <tbody id="cuerpo"></tbody>
+        </table>
+        <br>
+        <h3>Resulatados Operaciones con el Array</h3>
+        <table border="5">
+            <th>Operación</th><th>Resultado</th>
+            <tbody id="otroCuerpo"></tbody>
+        </table>
+    </center>
+    <script src="Ej8_Array.js"></script>
+</body>
+</html>
