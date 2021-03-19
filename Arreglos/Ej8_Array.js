@@ -1,5 +1,4 @@
 var myArrayNumeros = [];
-var salida='';
  function enviar(){
   myArrayNumeros.push(document.getElementById('num').value);
   document.getElementById('num').value='';
@@ -19,8 +18,15 @@ function listarNumeros(){
 function sumarNumero(){
   var salida1='';
   var sum=0;
-  for (i in myArrayNumeros)
-   sum+= parseInt(myArrayNumeros[i])  ;
+  var numMayor=parseInt(myArrayNumeros[0]);
+  for (i in myArrayNumeros){
+    sum+= parseInt(myArrayNumeros[i])  ;
+    if(parseInt(myArrayNumeros[i])>numMayor){
+      numMayor=parseInt(myArrayNumeros[i]);
+    }
+  }
+   
    salida1+= '<tr><td>'+"SUMA"+'</td><td>'+sum+'</td></tr>';
+   salida1+= '<tr><td>'+"NUMERO MAYOR DEL ARREGLO"+'</td><td>'+numMayor+'</td></tr>';
    document.getElementById('otroCuerpo').innerHTML=salida1;
 }

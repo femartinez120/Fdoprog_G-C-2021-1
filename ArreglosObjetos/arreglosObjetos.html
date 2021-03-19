@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreglo de Objetos</title>
+    <style>
+        body{
+            background-color: bisque;
+            color: black;
+            font-size: 20px;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Ejemplo Manejo de Arreglos de Objetos</h1>
+        <hr>
+        <br>
+        <table border="5">
+            <th>Propiedades</th><th>Valor</th>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" name="nom" id="nom" placeholder="Digite Nombres" autofocus></td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td><input type="text" name="ape" id="ape" placeholder="Digite Apellidos"></td>
+                </tr>
+                <tr>
+                    <td>Nota 1</td>
+                    <td><input type="text" name="n1" id="n1" placeholder="Digite Nota 1"></td>
+                </tr>
+                <tr>
+                    <td>Nota 2</td>
+                    <td><input type="text" name="n2" id="n2" placeholder="Digite Nota 2"></td>
+                </tr>
+                <tr>
+                    <td>Nota 3</td>
+                    <td><input type="text" name="n3" id="n3" placeholder="Digite Nota 3"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="5">
+            <tr>
+                <td>
+                    <button onclick="agregar()" id="agr">Agregar</button>
+                    <button onclick="actualizar()" id="act">Actualizar</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <h2>Listado de Estudiantes Registrados</h2>
+        <table border="5">
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Nota Final</th>
+            <td>Acciones</td>
+            <tbody id="cuerpo"></tbody>
+        </table>
+    </center>
+    <script src="arreglosObjetos.js"></script>
+</body>
+</html>
