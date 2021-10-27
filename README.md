@@ -3,4 +3,4 @@ Desarrollo de Curso Fundamentos de Programación LI con énfasis en Medios Audio
 ## Docente Franklin Martínez Ávila
 ### Daniela Villadiego
 #### Reiner Infante
-
+#### Esta es una explicación para FdoAlg
